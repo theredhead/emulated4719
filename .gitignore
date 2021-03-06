@@ -1,0 +1,15 @@
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+node_modules/
+dist/
+coverage/
+.nyc_output/
+.DS_Store
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "@theredhead/emulated4719",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "publish-patch": "npm run test && npm run build && npm version patch && npm publish --access public",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "coverage": "nyc -r lcov -e .ts -x \"tests/*.test.ts\" npm run test",
+    "coverage-cli": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
+  },
+  "author": "kris@theredhead.nl",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.2.2",
+    "@types/jasmine": "^3.6.4",
+    "jasmine": "^3.6.4",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.1.1"
+  }
+}
