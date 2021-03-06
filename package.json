@@ -1,7 +1,7 @@
 {
   "name": "@theredhead/emulated4719",
   "version": "0.0.2",
-  "description": "",
+  "description": "- [Emulated 4719 processor](#emulated-4719-processor)   - [Purpose](#purpose)   - [Features](#features)   - [Usage](#usage)",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p .",
@@ -18,5 +18,23 @@
     "jasmine": "^3.6.4",
     "nyc": "^15.1.0",
     "ts-node": "^9.1.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theredhead/emulated4719.git"
+  },
+  "keywords": [
+    "4719",
+    "emulation",
+    "COMP1719",
+    "UNSW"
+  ],
+  "bugs": {
+    "url": "https://github.com/theredhead/emulated4719/issues"
+  },
+  "homepage": "https://github.com/theredhead/emulated4719#readme"
 }
