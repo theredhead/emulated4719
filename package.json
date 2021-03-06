@@ -1,6 +1,6 @@
 {
   "name": "@theredhead/emulated4719",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "- [Emulated 4719 processor](#emulated-4719-processor)   - [Purpose](#purpose)   - [Features](#features)   - [Usage](#usage)",
   "main": "dist/index.js",
   "scripts": {
