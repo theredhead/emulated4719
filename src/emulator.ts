@@ -352,6 +352,13 @@ export class Memory {
       );
     }
   }
+  toByteArray() {
+    const bytes = [];
+    for (let ix = 0; ix < this.size; ix++) {
+      bytes.push(this.read(ix));
+    }
+    return bytes;
+  }
 }
 export interface EmulatorSnapshot {
   memory: number[];
@@ -473,4 +480,28 @@ export const compile = (code: string): number[] => {
 
   const bits = tokenize(code);
   return bits.map((value) => opcodes[value] ?? Number(value));
+};
+
+export const decompile = (compiled: number[]): string => {
+  let opcodes: { [key: number]: string } = {};
+  for (var index in ASM4719OpCode) {
+    if (typeof ASM4719OpCode[index] === "string") {
+      opcodes[index] = <string>(<any>ASM4719OpCode[index]);
+    }
+  }
+  const lines = [];
+  for (let ip = 0; ip < compiled.length; ip++) {
+    const raw = compiled[ip];
+    const mnemonic = opcodes[raw];
+    const ss = compiled[ip + 1];
+    if (raw >= 8 && raw <= 15) {
+      // two byte instruction
+      lines.push(`${mnemonic} 0x${hexFormat(ss)}`);
+      ip++;
+    } else {
+      // one byte instruction
+      lines.push(mnemonic);
+    }
+  }
+  return lines.join("\n");
 };
