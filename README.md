@@ -1,19 +1,18 @@
-# PROJECT_NAME
+# Emulated 4719 processor
 
-- [PROJECT_NAME](#project_name)
+- [Emulated 4719 processor](#emulated-4719-processor)
   - [Purpose](#purpose)
   - [Features](#features)
   - [Usage](#usage)
 
 ## Purpose
 
-A brief description of the purpose of this product.
+This is a study toy that serves no real purpose.
 
 ## Features
 
-- Cool thing this product is good for
-- Another cool thing this product can do
+- Simulates the 4719 from the COMP11719 UNSW course.
 
 ## Usage
 
-Get a developer started using the most important feature of this product.
+I have faith that you can figure it out. If not, send me a line!
